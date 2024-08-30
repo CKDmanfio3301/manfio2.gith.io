@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assine Ben 10+</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #003d60;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        h2 {
+            margin-top: 1rem;
+            font-size: 1.5rem;
+            color: #003d60;
+        }
+        p {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        input {
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        button {
+            background-color: #003d60;
+            color: #fff;
+            border: none;
+            padding: 0.75rem;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #002b44;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #003d60;
+            color: #fff;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Assine Ben 10+</h1>
+    </header>
+    
+    <section class="container">
+        <h2>Planos e Preços</h2>
+        <p>Assine o Ben 10 + por apenas <strong>12x de R$ 1,00</strong>!</p>
+        
+        <h2>Informações de Pagamento</h2>
+        <p>Para completar sua assinatura, por favor, preencha suas informações de pagamento abaixo.</p>
+        
+        <form action="processar_pagamento.php" method="post">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
+            
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="cartao">Número do Cartão:</label>
+            <input type="text" id="cartao" name="cartao" required>
+            
+            <label for="data-expiracao">Data de Expiração:</label>
+            <input type="text" id="data-expiracao" name="data-expiracao" required>
+            
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" required>
+            
+            <button type="submit">Pagar e Assinar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>® 2024 Ben 10 +. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
