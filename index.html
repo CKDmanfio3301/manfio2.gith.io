@@ -4,118 +4,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assine Ben 10+</title>
+    <title>Pagamento via PIX</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --branco-principal: #FFFFFF;
+            --verde-principal: #00BFAE; /* Verde típico do Ben 10 */
+            --cor-de-fundo: #000000; /* Fundo escuro para destacar o verde */
+            --fonte-principal: 'Inter', sans-serif;
+        }
+
         body {
-            font-family: 'Inter', sans-serif;
+            background-color: var(--cor-de-fundo);
+            color: var(--branco-principal);
+            font-family: var(--fonte-principal);
+            font-size: 16px;
+            text-align: center;
+            padding: 2em;
             margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
         }
-        header {
-            background-color: #003d60;
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-        }
+
         .container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 1rem;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            padding: 2em;
+            display: inline-block;
+            max-width: 600px;
+            width: 100%;
         }
+
         h1 {
-            margin-bottom: 1rem;
-            font-size: 2rem;
+            color: var(--verde-principal);
+            font-size: 24px;
+            margin-bottom: 1em;
         }
-        h2 {
-            margin-top: 1rem;
-            font-size: 1.5rem;
-            color: #003d60;
-        }
+
         p {
-            margin-bottom: 1rem;
-            font-size: 1rem;
+            font-size: 18px;
+            margin-bottom: 1em;
         }
-        form {
-            display: flex;
-            flex-direction: column;
+
+        .qr-code {
+            margin-top: 1em;
         }
-        label {
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-        }
-        input {
-            margin-bottom: 1rem;
-            padding: 0.5rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 1rem;
-        }
-        button {
-            background-color: #003d60;
-            color: #fff;
-            border: none;
-            padding: 0.75rem;
-            border-radius: 4px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        button:hover {
-            background-color: #002b44;
-        }
-        footer {
-            text-align: center;
-            padding: 1rem 0;
-            background-color: #003d60;
-            color: #fff;
-            font-size: 0.875rem;
+
+        .qr-code img {
+            max-width: 100%;
+            height: auto;
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <h1>Assine Ben 10+</h1>
-    </header>
-    
-    <section class="container">
-        <h2>Planos e Preços</h2>
-        <p>Assine o Ben 10 + por apenas <strong>12x de R$ 1,00</strong>!</p>
+    <div class="container">
+        <h1>Pagamento via PIX</h1>
+        <p>Para concluir o pagamento, utilize a chave PIX abaixo:</p>
+        <p><strong>(18)998240250</strong></p> <!-- Substitua pela sua chave PIX -->
         
-        <h2>Informações de Pagamento</h2>
-        <p>Para completar sua assinatura, por favor, preencha suas informações de pagamento abaixo.</p>
-        
-        <form action="processar_pagamento.php" method="post">
-            <label for="nome">Nome Completo:</label>
-            <input type="text" id="nome" name="nome" required>
-            
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="cartao">Número do Cartão:</label>
-            <input type="text" id="cartao" name="cartao" required>
-            
-            <label for="data-expiracao">Data de Expiração:</label>
-            <input type="text" id="data-expiracao" name="data-expiracao" required>
-            
-            <label for="cvv">CVV:</label>
-            <input type="text" id="cvv" name="cvv" required>
-            
-            <button type="submit">Pagar e Assinar</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>® 2024 Ben 10 +. Todos os direitos reservados.</p>
-    </footer>
+        <p>Ou escaneie o QR Code abaixo:</p>
+        <div class="qr-code">
+            <!-- Substitua o src pela URL do seu QR Code gerado -->
+            <img src="SEU_CODIGO_QR_CODE.png" alt="QR Code PIX">
+        </div>
+    </div>
 </body>
 
 </html>
